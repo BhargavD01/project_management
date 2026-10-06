@@ -1,4 +1,31 @@
-<img width="1470" height="843" alt="Screenshot 2026-10-06 at 12 52 12 PM" src="https://github.com/user-attachments/assets/44564b98-92b4-45a7-886c-4742c9ba38d3" />
-<img width="1470" height="781" alt="Screenshot 2026-10-06 at 12 51 33 PM" src="https://github.com/user-attachments/assets/3c849dde-88bc-4ce2-9328-d1ababf53a4b" />
-<img width="1470" height="839" alt="Screenshot 2026-10-06 at 12 52 19 PM" src="https://github.com/user-attachments/assets/7843e671-4fbe-4fca-97ee-7f9384a3ec15" />
-<img width="1470" height="843" alt="Screenshot 2026-10-06 at 12 51 43 PM" src="https://github.com/user-attachments/assets/59e75b59-e486-4edd-bfea-bdae74ec57ea" />
+# CoreShift – Banking Migration Control Center
+
+A standalone frontend demo for Case Study No. 13: CoreShift – Migrating a 1.2 Million-Line COBOL Core Banking System.
+
+## How to run
+
+### Option 1 – VS Code + Live Server
+1. Open this folder in VS Code.
+2. Install the **Live Server** extension if it is not already installed.
+3. Right-click `index.html`.
+4. Select **Open with Live Server**.
+
+### Option 2 – Direct browser
+Double-click `index.html` or open it in a browser.
+
+No Node.js, Flutter, database, API, Firebase or backend is required.
+
+## Demo sections
+
+- Overview dashboard
+- Parallel-run reconciliation
+- Account and product coverage
+- Target architecture
+- Risk register
+- Recovered requirements
+- 2:00 AM cutover runbook
+- COCOMO and quality metrics
+
+## Important
+
+This is a presentation/demo UI for the academic case study. The numbers shown are based on the figures supplied in the case study and illustrative dashboard-state values. It is not an actual banking system and does not process real financial transactions.

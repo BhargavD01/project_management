@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreShift | Banking Migration Control Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">CS</div>
+      <div><strong>CoreShift</strong><span>Migration Control</span></div>
+    </div>
+    <nav id="nav">
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span> Overview</button>
+      <button class="nav-item" data-page="reconciliation"><span>⇄</span> Reconciliation</button>
+      <button class="nav-item" data-page="accounts"><span>◎</span> Account Coverage</button>
+      <button class="nav-item" data-page="architecture"><span>◈</span> Architecture</button>
+      <button class="nav-item" data-page="risks"><span>△</span> Risk Register</button>
+      <button class="nav-item" data-page="requirements"><span>▤</span> Requirements</button>
+      <button class="nav-item" data-page="cutover"><span>⚡</span> Cutover Runbook</button>
+      <button class="nav-item" data-page="estimation"><span>◷</span> Estimation</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="status-dot"></div>
+      <div><small>Migration environment</small><strong>PARALLEL RUN ACTIVE</strong></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">COOPERATIVE BANK · CASE STUDY 13</div>
+        <h1 id="pageTitle">Migration Control Center</h1>
+      </div>
+      <div class="top-actions">
+        <div class="live"><i></i> Live simulation</div>
+        <button class="icon-btn" id="refreshBtn" title="Refresh simulation">↻</button>
+        <div class="avatar">BD</div>
+      </div>
+    </header>
+
+    <section id="dashboard" class="page active-page">
+      <div class="hero">
+        <div>
+          <div class="pill green">● PARALLEL RUN</div>
+          <h2>Modernize the core.<br><span>Preserve the behaviour.</span></h2>
+          <p>CoreShift is progressively replacing the 1,200 KLOC COBOL core while validating financial equivalence across 900,000 accounts and 14 product types.</p>
+          <div class="hero-actions">
+            <button class="primary" data-go="reconciliation">Open reconciliation <b>→</b></button>
+            <button class="secondary" data-go="architecture">View architecture</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="orbit orbit1"></div><div class="orbit orbit2"></div>
+          <div class="core-node">CORE<br><small>SHIFT</small></div>
+          <div class="mini-node n1">COBOL</div><div class="mini-node n2">NEW CORE</div><div class="mini-node n3">RECON</div>
+        </div>
+      </div>
+
+      <div class="metric-grid">
+        <div class="metric"><span>Accounts in scope</span><strong>900,000</strong><small>14 product types</small></div>
+        <div class="metric"><span>Legacy codebase</span><strong>1,200 <em>KLOC</em></strong><small>COBOL · 1989–2004</small></div>
+        <div class="metric"><span>Target system</span><strong>220 <em>KLOC</em></strong><small>Modern stack</small></div>
+        <div class="metric"><span>Reconciliation</span><strong class="success">99.98%</strong><small>Zero unexplained monetary variance</small></div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-head"><div><h3>Migration progress</h3><p>Strangler-fig rollout</p></div><span class="tag">Phase 6 / 9</span></div>
+          <div class="progress-main"><strong>68%</strong><span>controlled migration coverage</span></div>
+          <div class="bar"><i style="width:68%"></i></div>
+          <div class="phase-list">
+            <div class="phase done"><b>✓</b><span>Discovery & reverse engineering</span><small>Complete</small></div>
+            <div class="phase done"><b>✓</b><span>Requirements recovery</span><small>Complete</small></div>
+            <div class="phase done"><b>✓</b><span>Target architecture</span><small>Complete</small></div>
+            <div class="phase current"><b>6</b><span>Parallel run & reconciliation</span><small>Active</small></div>
+            <div class="phase"><b>7</b><span>Incremental product migration</span><small>Next</small></div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><div><h3>Control gates</h3><p>Current readiness checks</p></div></div>
+          <div class="gate"><span class="gate-icon pass">✓</span><div><b>Financial equivalence</b><small>Within approved policy</small></div><strong>PASS</strong></div>
+          <div class="gate"><span class="gate-icon pass">✓</span><div><b>Product coverage</b><small>14 / 14 types represented</small></div><strong>PASS</strong></div>
+          <div class="gate"><span class="gate-icon warn">!</span><div><b>Knowledge transfer</b><small>2 experts retire next year</small></div><strong>WATCH</strong></div>
+          <div class="gate"><span class="gate-icon pass">✓</span><div><b>Rollback rehearsal</b><small>Runbook validated</small></div><strong>PASS</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reconciliation" class="page">
+      <div class="page-intro"><div><div class="eyebrow">QUALITY ASSURANCE</div><h2>Parallel-run reconciliation</h2><p>Compare the legacy COBOL output against the modern core before every migration gate.</p></div><div class="pill green">● ENGINE HEALTHY</div></div>
+      <div class="metric-grid">
+        <div class="metric"><span>Accounts compared</span><strong id="compared">899,982</strong><small>of 900,000 in scope</small></div>
+        <div class="metric"><span>Exact matches</span><strong class="success" id="matches">899,820</strong><small>Financial outputs</small></div>
+        <div class="metric"><span>Investigations</span><strong class="warning" id="investigations">162</strong><small>Non-zero comparison records</small></div>
+        <div class="metric"><span>Material variance</span><strong>₹0.00</strong><small>Unexplained</small></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Comparison policy</h3><p>Financial values are treated conservatively</p></div><span class="tag">Tolerance: ₹0.00</span></div>
+        <div class="policy-grid">
+          <div class="policy"><b>Default monetary tolerance</b><strong>₹0.00</strong><span>Zero unexplained difference</span></div>
+          <div class="policy"><b>Authority for exceptions</b><strong>Business + Finance + Compliance</strong><span>Not developer-defined</span></div>
+          <div class="policy"><b>Rare product handling</b><strong>100% coverage</strong><span>All 30 Product Type 14 accounts</span></div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Recent comparison events</h3><p>Automated comparison harness</p></div><button class="secondary small" id="runRecon">Run validation</button></div>
+        <table><thead><tr><th>Time</th><th>Account</th><th>Product</th><th>Legacy</th><th>Modern</th><th>Result</th></tr></thead>
+        <tbody id="reconTable">
+          <tr><td>00:47:12</td><td>•••• 4812</td><td>Savings</td><td>₹84,521.19</td><td>₹84,521.19</td><td><span class="status pass">MATCH</span></td></tr>
+          <tr><td>00:46:58</td><td>•••• 9031</td><td>Term Loan</td><td>₹1,24,009.00</td><td>₹1,24,009.00</td><td><span class="status pass">MATCH</span></td></tr>
+          <tr><td>00:46:42</td><td>•••• 0027</td><td>Product 14</td><td>₹31,400.50</td><td>₹31,400.50</td><td><span class="status pass">MATCH</span></td></tr>
+          <tr><td>00:45:16</td><td>•••• 7710</td><td>Current</td><td>₹9,820.00</td><td>₹9,820.00</td><td><span class="status pass">MATCH</span></td></tr>
+        </tbody></table>
+      </div>
+    </section>
+
+    <section id="accounts" class="page">
+      <div class="page-intro"><div><div class="eyebrow">REGRESSION COVERAGE</div><h2>Account & product coverage</h2><p>Stratified coverage across the complete migration population.</p></div></div>
+      <div class="coverage-card">
+        <div class="coverage-ring"><div><strong>99.98%</strong><small>validated</small></div></div>
+        <div><h3>900,000 accounts</h3><p>Coverage is stratified by product, balance range, transaction frequency, account status and legacy characteristics.</p><div class="legend"><span><i class="dot good"></i>Validated</span><span><i class="dot review"></i>Investigation</span><span><i class="dot pending"></i>Pending</span></div></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Product portfolio</h3><p>All 14 product types must be represented in regression.</p></div></div>
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <section id="architecture" class="page">
+      <div class="page-intro"><div><div class="eyebrow">SYSTEM DESIGN</div><h2>Target architecture</h2><p>Modern services coexist with the legacy core during the strangler-fig transition.</p></div><span class="pill blue">STRANGLER-FIG</span></div>
+      <div class="architecture-canvas">
+        <div class="arch-row users"><div class="arch-box accent">Customers & Bank Staff</div><div class="connector">↓</div><div class="arch-box">API Gateway</div></div>
+        <div class="connector">↓</div>
+        <div class="arch-row">
+          <div class="arch-box">Account Service</div><div class="arch-box">Transaction Service</div><div class="arch-box">Payment Service</div>
+        </div>
+        <div class="connector">↓</div>
+        <div class="arch-box wide">Core Banking Rules · Interest Engine · Penalty Engine · EOD Service · Product Rules</div>
+        <div class="connector split">↙　　　　　　　　　↘</div>
+        <div class="arch-row">
+          <div class="arch-box db">Modern Database</div>
+          <div class="arch-box compare">Reconciliation Engine</div>
+        </div>
+        <div class="connector">↓</div>
+        <div class="arch-box legacy">Legacy Adapter → COBOL Core Banking · 1,200 KLOC</div>
+      </div>
+      <div class="design-notes">
+        <div><b>Why this architecture?</b><p>It allows new capabilities to be introduced without immediately removing the legacy platform. The adapter and reconciliation layer provide controlled coexistence and evidence-based migration.</p></div>
+        <div><b>Migration principle</b><p>Replace implementation gradually while preserving externally observable financial behaviour.</p></div>
+      </div>
+    </section>
+
+    <section id="risks" class="page">
+      <div class="page-intro"><div><div class="eyebrow">RISK MANAGEMENT</div><h2>Risk register</h2><p>Probability × impact scoring with RMMM controls.</p></div></div>
+      <div class="risk-summary"><div><strong>3</strong><span>Active critical/high risks</span></div><div><strong>25</strong><span>Highest risk score</span></div><div><strong>1</strong><span>Critical priority</span></div></div>
+      <div class="panel"><table><thead><tr><th>Rank</th><th>Risk</th><th>Probability</th><th>Impact</th><th>Score</th><th>RMMM focus</th></tr></thead>
+      <tbody>
+        <tr><td><b>#1</b></td><td><b>Knowledge loss</b><small>2 of 4 experts retire next year</small></td><td>5 / 5</td><td>5 / 5</td><td><span class="risk critical">25 CRITICAL</span></td><td>Immediate interviews, walkthroughs, ownership</td></tr>
+        <tr><td><b>#2</b></td><td><b>Financial divergence</b><small>Interest / penalties / EOD / rounding</small></td><td>4 / 5</td><td>5 / 5</td><td><span class="risk high">20 HIGH</span></td><td>Parallel run, comparison, reconciliation</td></tr>
+        <tr><td><b>#3</b></td><td><b>Cutover failure</b><small>Data sync / integration / performance</small></td><td>3 / 5</td><td>5 / 5</td><td><span class="risk high">15 HIGH</span></td><td>Rehearsal, backup, rollback triggers</td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section id="requirements" class="page">
+      <div class="page-intro"><div><div class="eyebrow">REQUIREMENTS ENGINEERING</div><h2>Recovered requirements</h2><p>Requirements are reconstructed from code, experts and operational evidence.</p></div></div>
+      <div class="req-grid">
+        <div class="req-card"><span>FR-01</span><h3>Account Management</h3><p>Maintain account information, status and migrated attributes.</p><b>Confirmed</b></div>
+        <div class="req-card"><span>FR-04</span><h3>Interest Calculation</h3><p>Reproduce approved legacy interest calculation behaviour.</p><b>Confirmed</b></div>
+        <div class="req-card"><span>FR-05</span><h3>Penalty Calculation</h3><p>Apply recovered penalty rules and product exceptions.</p><b>Confirmed</b></div>
+        <div class="req-card"><span>FR-08</span><h3>Output Comparison</h3><p>Compare legacy and modern outputs and classify differences.</p><b>Confirmed</b></div>
+        <div class="req-card"><span>NFR-03</span><h3>Scalability</h3><p>Target platform must support required instant-payment workload.</p><b>High priority</b></div>
+        <div class="req-card"><span>NFR-06</span><h3>Auditability</h3><p>Migration and financial decisions must be traceable.</p><b>High priority</b></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head"><div><h3>Knowledge capture</h3><p>Retirement-driven workstream</p></div><span class="tag warning-tag">2 experts retiring next year</span></div>
+        <div class="timeline"><div><b>01</b><span>Identify expert ownership</span></div><div><b>02</b><span>Record code walkthroughs</span></div><div><b>03</b><span>Document business rules</span></div><div><b>04</b><span>Cross-validate with code</span></div><div><b>05</b><span>Assign modern-system owners</span></div></div>
+      </div>
+    </section>
+
+    <section id="cutover" class="page">
+      <div class="page-intro"><div><div class="eyebrow">OPERATIONS</div><h2>2:00 AM cutover runbook</h2><p>Controlled switch with explicit verification gates and rollback triggers.</p></div><span class="pill green">ROLLBACK READY</span></div>
+      <div class="runbook">
+        <div class="run-step"><span>T−7D</span><div><h3>Rehearse</h3><p>Complete migration rehearsal, verify backup and rollback procedures.</p></div><b>✓</b></div>
+        <div class="run-step"><span>T−24H</span><div><h3>Readiness</h3><p>Confirm production readiness, monitoring, scripts and stakeholder availability.</p></div><b>✓</b></div>
+        <div class="run-step"><span>T−1H</span><div><h3>Prepare</h3><p>Stop non-essential jobs, verify queues and final synchronization status.</p></div><b>✓</b></div>
+        <div class="run-step"><span>T−30M</span><div><h3>Freeze & reconcile</h3><p>Freeze transactions, synchronize data and obtain go/no-go approval.</p></div><b>✓</b></div>
+        <div class="run-step active"><span>T=0</span><div><h3>Switch traffic</h3><p>Route approved workload to the modern platform while keeping legacy available.</p></div><b>NOW</b></div>
+        <div class="run-step"><span>T+15M</span><div><h3>Verify</h3><p>Check balances, transactions, payment processing, latency and errors.</p></div><b>6</b></div>
+        <div class="run-step"><span>T+30M</span><div><h3>Reconcile</h3><p>Perform transaction reconciliation and business validation.</p></div><b>7</b></div>
+        <div class="run-step danger"><span>TRIGGER</span><div><h3>Rollback</h3><p>Stop writes → preserve logs → reconcile → restore legacy routing → verify.</p></div><b>!</b></div>
+      </div>
+    </section>
+
+    <section id="estimation" class="page">
+      <div class="page-intro"><div><div class="eyebrow">ESTIMATION</div><h2>COCOMO & quality metrics</h2><p>Basic COCOMO, semi-detached mode, using the case-study figures.</p></div></div>
+      <div class="metric-grid">
+        <div class="metric"><span>Target size</span><strong>220 <em>KLOC</em></strong><small>New system</small></div>
+        <div class="metric"><span>Estimated effort</span><strong>1,261</strong><small>person-months</small></div>
+        <div class="metric"><span>Estimated duration</span><strong>30.4</strong><small>months</small></div>
+        <div class="metric"><span>Average staffing</span><strong>41</strong><small>people</small></div>
+      </div>
+      <div class="formula-panel"><div><span>Basic COCOMO · Semi-detached</span><code>E = 3.0 × KLOC<sup>1.12</sup></code><code>D = 2.5 × E<sup>0.35</sup></code><code>Staff = E / D</code></div><div class="big-number">81.7%<small>apparent LOC reduction</small></div></div>
+      <div class="two-col">
+        <div class="panel"><div class="panel-head"><div><h3>Comparable migration quality</h3><p>Given defect data</p></div></div><div class="quality-row"><b>Pre-release defects</b><strong>310</strong></div><div class="quality-row"><b>Post-release defects</b><strong>48</strong></div><div class="quality-row"><b>Defect density</b><strong>1.41 / KLOC</strong></div><div class="quality-row"><b>DRE</b><strong>86.6%</strong></div></div>
+        <div class="panel"><div class="panel-head"><div><h3>Board message</h3></div></div><p class="quote">“Fewer lines describe a smaller target implementation — not a proportionally smaller migration. The bank still has to understand and prove the behaviour of the entire 1,200 KLOC legacy system.”</p></div>
+      </div>
+    </section>
+
+    <footer><span>CoreShift · Case Study 13</span><span>Migration Control Center · Demo UI</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
